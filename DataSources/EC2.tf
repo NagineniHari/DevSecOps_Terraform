@@ -1,5 +1,6 @@
 resource "aws_instance" "terraform" {
     count=10
+    #ami = "data.aws_ami.safety.id"
     ami = "ami-09c813fb71547fc4f"
     instance_type = "t2.micro"
     vpc_security_group_ids = [aws_security_group.allow_all_SG.id]
