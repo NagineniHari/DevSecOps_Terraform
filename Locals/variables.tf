@@ -11,54 +11,54 @@ variable "environment" {
 # }
 
 variable "ami_id" {
-  type=string
+  type    = string
   default = "ami-09c813fb71547fc4f"
 }
 
 variable "instance_type" {
-  type=string
+  type    = string
   default = "t2.micro"
-} 
+}
 
-variable "common_tags"{
- type= map 
- default ={
-     terraform= "yes"
-     project= "safety"
-     environment= "dev"
+variable "common_tags" {
+  type = map(any)
+  default = {
+    terraform   = "yes"
+    project     = "safety"
+    environment = "dev"
+
+  }
 
 }
 
- }
+variable "sg_name" {
+  type        = string
+  default     = "allow_to_all"
+  description = "allow to all for ec2 server"
+}
 
- variable "sg_name" {
-  type=string
-  default = "allow_to_all"
-  description= "allow to all for ec2 server"
-} 
-
- variable "cidr" {
-  type= list
+variable "cidr" {
+  type    = list(any)
   default = ["0.0.0.0/0"]
-} 
+}
 
- variable "egress_from_port" {
+variable "egress_from_port" {
   default = 0
-}  
+}
 
- variable "egress_to_port" {
+variable "egress_to_port" {
   default = 0
-} 
+}
 
- variable "ingress_from_port" {
+variable "ingress_from_port" {
   default = 0
-} 
+}
 
- variable "ingress_to_port" {
+variable "ingress_to_port" {
   default = 0
-} 
+}
 
- variable "protocol" {
-  type=string  
+variable "protocol" {
+  type    = string
   default = "-1"
 } 

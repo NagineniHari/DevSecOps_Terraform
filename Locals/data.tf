@@ -1,6 +1,6 @@
 data "aws_ami" "Safety" {
-  owners           = ["973714476881"]
-  most_recent      = true
+  owners      = ["973714476881"]
+  most_recent = true
 
   filter {
     name   = "name"
@@ -19,5 +19,5 @@ data "aws_ami" "Safety" {
 }
 
 output "Name" {
- value="${local.common_name}-local-demo"
- }
+  value = "${local.common_name}-local-demo"
+}

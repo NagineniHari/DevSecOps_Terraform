@@ -1,5 +1,5 @@
 variable "instances" {
-  default = ["mongodb","catalogue","redis","user","cart","mysql","shipping","rabbitmq","payment","frontend"]
+  default = ["mongodb", "catalogue", "redis", "user", "cart", "mysql", "shipping", "rabbitmq", "payment", "frontend"]
 }
 
 variable "zone_id" {
@@ -7,5 +7,5 @@ variable "zone_id" {
 }
 
 variable "domain_name" {
-  default ="naginenihariaws.store"
+  default = "naginenihariaws.store"
 }

@@ -1,3 +1,3 @@
-variable "environment"{
-    default= "qa1"
+variable "environment" {
+  default = "qa1"
 }
